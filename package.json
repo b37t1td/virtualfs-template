@@ -1,0 +1,29 @@
+{
+  "name": "virtualfs-template",
+  "version": "1.0.0",
+  "description": "Playing around fylesystem things",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && npm run mocha",
+    "mocha" : "mocha tests/",
+    "lint" : "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b37t1td/virtualfs-template.git"
+  },
+  "author": "Svetlana Linuxenko <linuxenko@yahoo.com> (http://www.linuxenko.pro)",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/b37t1td/virtualfs-template/issues"
+  },
+  "homepage": "https://github.com/b37t1td/virtualfs-template#readme",
+  "dependencies": {
+    "fuse-bindings": "^2.10.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.9.1",
+    "mocha": "^3.1.2"
+  }
+}
