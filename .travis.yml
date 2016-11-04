@@ -1,3 +1,5 @@
+before_install:
+  - sudo apt-get install -y libfuse-dev 
 language: node_js
 node_js:
     - "6"
