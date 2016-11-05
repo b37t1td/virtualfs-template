@@ -11,8 +11,10 @@ Virtual FS is a general inmemory chaching template
   - [x] Inmemory json fs
   - [x] List of files and folders
   - [x] Read files
-  - [ ] Create directories
-  - [ ] Remove directories
-  - [ ] Create files
+  - [x] System (utimens, truncate)
+  - [x] Create directories
+  - [x] Remove directories
+  - [x] Create files
   - [x] Remove files
   - [ ] Write into files
+  - [ ] Handle rename
