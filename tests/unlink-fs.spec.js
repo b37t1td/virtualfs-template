@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var jsonData = require('./fixture/twodem');
+var jsonData = require('./fixture/flat');
 var MemFS = require('../lib/memory-fs');
 
 var memfs = new MemFS(jsonData);

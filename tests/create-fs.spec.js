@@ -1,7 +1,7 @@
 var expect = require('chai').expect;
 var _ = require('lodash');
 
-var jsonData = require('./fixture/twodem');
+var jsonData = require('./fixture/flat');
 var MemFS = require('../lib/memory-fs');
 
 var memfs = new MemFS(_.cloneDeep(jsonData));
@@ -16,8 +16,7 @@ describe('Memory-FS create tests', function() {
 
       memfs.getattr(path, function(err, data) {
         expect(err).to.be.null;
-        expect(data.name).to.equal('new-file.txt');
-        expect(data.content).to.be.false;
+        expect(data).to.be.an('object');
         done();
       });
     });
@@ -31,7 +30,7 @@ describe('Memory-FS create tests', function() {
 
       memfs.getattr(path, function(err, data) {
         expect(err).to.be.null;
-        expect(data.name).to.equal('new-file.txt');
+        expect(data).to.be.an('object');
         done();
       });
 
@@ -46,7 +45,7 @@ describe('Memory-FS create tests', function() {
 
       memfs.getattr(path, function(err, data) {
         expect(err).to.be.null;
-        expect(data.name).to.equal('new-file.txt');
+        expect(data).to.be.an('object');
         done();
       });
     });

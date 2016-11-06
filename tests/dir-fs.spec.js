@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 var _ = require('lodash');
-var jsonData = require('./fixture/twodem');
+var jsonData = require('./fixture/flat');
 var MemFS = require('../lib/memory-fs');
 
 var memfs = new MemFS(_.cloneDeep(jsonData));
@@ -10,7 +10,7 @@ describe('Memory-FS mk/rm dir tests', function() {
 
   it('should create /test-dir', function(done) {
     var path = '/test-dir';
-    memfs.create(path, 'dir', function(err) {
+    memfs.mkdir(path, function(err) {
       expect(err).to.be.null;
 
       memfs.getattr(path, function(err, data) {
@@ -24,7 +24,7 @@ describe('Memory-FS mk/rm dir tests', function() {
 
   it('should create /test-dir/dir-2', function(done) {
     var path = '/test-dir/dir-2';
-    memfs.create(path, 'dir', function(err) {
+    memfs.mkdir(path, function(err) {
       expect(err).to.be.null;
 
       memfs.getattr(path, function(err, data) {

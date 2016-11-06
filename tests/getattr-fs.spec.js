@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var jsonData = require('./fixture/twodem');
+var jsonData = require('./fixture/flat');
 var MemFS = require('../lib/memory-fs');
 
 var memfs = new MemFS(jsonData);
@@ -11,7 +11,6 @@ describe('Memory-FS getattr tests', function() {
     memfs.getattr('/', function(err, dir) {
       expect(err).to.be.null;
       expect(dir).to.be.an('object');
-      expect(dir.size).to.be.a('number');
       expect(dir.mode).to.equal(16877);
       done();
     });
