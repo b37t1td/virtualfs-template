@@ -11,7 +11,7 @@ describe('Memory-FS getattr tests', function() {
     memfs.getattr('/', function(err, dir) {
       expect(err).to.be.null;
       expect(dir).to.be.an('object');
-      expect(dir.mode).to.equal(16877);
+      expect(dir.mode).to.equal(16832);
       done();
     });
   });
@@ -20,7 +20,7 @@ describe('Memory-FS getattr tests', function() {
     memfs.getattr('/amadir', function(err, dir) {
       expect(err).to.be.null;
       expect(dir).to.be.an('object');
-      expect(dir.mode).to.equal(16877);
+      expect(dir.mode).to.equal(16832);
       expect(dir.mtime).to.be.a('date');
       expect(dir.atime).to.be.a('date');
       expect(dir.ctime).to.be.a('date');
@@ -40,7 +40,7 @@ describe('Memory-FS getattr tests', function() {
     memfs.getattr('/hello.txt', function(err, dir) {
       expect(err).to.be.null;
       expect(dir).to.be.an('object');
-      expect(dir.mode).to.equal(33188);
+      expect(dir.mode).to.equal(33152);
       expect(dir.mtime).to.be.a('date');
       expect(dir.atime).to.be.a('date');
       expect(dir.ctime).to.be.a('date');
