@@ -23,13 +23,52 @@ Virtual FS is a general inmemory chaching template
 ------------------------------------
 
   - [x] Crypto-cache caching
-  - [ ] Middleware calls 
-  - [ ] Separete encrypted cache from package
+  - [x] Middleware calls 
+  - [x] Separete encrypted cache from package
   - [x] Secure fs premissions
 
   ** Middleware API 0.0.0pre0001 try **
 ------------------------------------
 
-  - [ ] Asynchronous worker only
+  - [x] Asynchronous worker only
   - [ ] Initialization handler
   - [ ] Read handle
+
+
+
+  ** Test Middleware Template v0.1 **
+------------------------------------
+  ```js
+var debouncy = require('debouncy');
+
+var sync = debouncy(function(data) {
+  return data;
+}, 1000, null);
+
+var Dummy = function() {
+
+};
+
+Dummy.prototype.fetch = function(path, callback) {
+  setTimeout(function() {
+    return callback(null, 'hello world');
+  }, 2000);
+};
+
+Dummy.prototype.sync = function(json, callback) {
+  sync(json);
+  callback();
+};
+
+Dummy.prototype.post = function(path, buffer, callback) {
+  callback();
+};
+
+Dummy.prototype.del = function(path, callback) {
+  callback();
+};
+
+module.exports = Dummy;
+```
+
+
