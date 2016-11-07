@@ -16,5 +16,5 @@ Virtual FS is a general inmemory chaching template
   - [x] Remove directories
   - [x] Create files
   - [x] Remove files
-  - [ ] Write into files
-  - [ ] Handle rename
+  - [x] Write into files
+  - [x] Handle rename
