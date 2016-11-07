@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/b37t1td/virtualfs-template#readme",
   "dependencies": {
+    "encrypted-cache": "^1.0.0",
     "fuse-bindings": "^2.10.1",
     "tmp": "0.0.30"
   },
