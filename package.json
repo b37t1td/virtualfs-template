@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/b37t1td/virtualfs-template#readme",
   "dependencies": {
-    "fuse-bindings": "^2.10.1"
+    "fuse-bindings": "^2.10.1",
+    "tmp": "0.0.30"
   },
   "devDependencies": {
     "chai": "^3.5.0",

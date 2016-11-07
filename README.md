@@ -22,3 +22,4 @@ Virtual FS is a general inmemory chaching template
 ------------------------------------
   - [x] Crypto-cache caching
   - [ ] Middleware calls 
+  - [x] Secure fs premissions
