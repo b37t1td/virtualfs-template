@@ -27,8 +27,8 @@ Virtual FS is a general inmemory chaching template
   - [ ] Separete encrypted cache from package
   - [x] Secure fs premissions
 
-------------------------------------
   ** Middleware API 0.0.0pre0001 try **
+------------------------------------
 
   - [ ] Asynchronous worker only
   - [ ] Initialization handler
