@@ -1,8 +1,9 @@
 var expect = require('chai').expect;
+var _ = require('lodash');
 var jsonData = require('./fixture/flat');
 var MemFS = require('../lib/memory-fs');
 
-var memfs = new MemFS(jsonData);
+var memfs = new MemFS(_.cloneDeep(jsonData));
 
 var getNode = function(path, callback) {
   memfs.getattr(path, callback);
@@ -49,6 +50,24 @@ describe('Memory-FS unlink test', function() {
       done();
     });
 
+  });
+
+  it('should implement case removing new file', function(done) {
+    memfs = new MemFS(_.cloneDeep(jsonData));
+
+    memfs.create('/t', 'file', function(err) {
+      expect(err).to.be.null;
+
+      memfs.unlink('/t', function(err) {
+        expect(err).to.be.null;
+
+        memfs.readdir('/', function(err, data) {
+          expect(err).to.be.null;
+          expect(data.length).to.equal(4);
+          done();
+        });
+      });
+    });
   });
 
 });
