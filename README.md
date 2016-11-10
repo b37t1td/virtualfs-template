@@ -27,18 +27,10 @@ Virtual FS is a general inmemory chaching template
   - [x] Separete encrypted cache from package
   - [x] Secure fs premissions
 
-  ** Middleware API 0.0.0pre0001 try **
+
+  ** Dummy middleware Template v0.2 **
 ------------------------------------
-
-  - [x] Asynchronous worker only
-  - [ ] Initialization handler
-  - [ ] Read handle
-
-
-
-  ** Test Middleware Template v0.1 **
-------------------------------------
-  ```js
+```js
 var debouncy = require('debouncy');
 
 var sync = debouncy(function(data) {
@@ -49,7 +41,7 @@ var Dummy = function() {
 
 };
 
-Dummy.prototype.fetch = function(path, callback) {
+Dummy.prototype.fetch = function(json, callback) {
   setTimeout(function() {
     return callback(null, 'hello world');
   }, 2000);
@@ -60,15 +52,29 @@ Dummy.prototype.sync = function(json, callback) {
   callback();
 };
 
-Dummy.prototype.post = function(path, buffer, callback) {
+Dummy.prototype.post = function(json, buffer, callback) {
   callback();
 };
 
-Dummy.prototype.del = function(path, callback) {
+Dummy.prototype.del = function(json, callback) {
   callback();
 };
 
 module.exports = Dummy;
 ```
 
+  ** Mounted filesystem tests **
+-----------------------------------
+  - [ ] Tests for mountpoints
+  - [ ] Test readdir listing
+  - [ ] Test file writes
+  - [ ] Test symlinks
+  - [ ] Test directories mk/rm
+  - [ ] Test file moving
+  - [ ] Test removes
+  - [ ] Test recursive removes
 
+
+### LiCENSE
+
+BDS
