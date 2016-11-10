@@ -77,4 +77,4 @@ module.exports = Dummy;
 
 ### LiCENSE
 
-BDS
+BSD
