@@ -65,14 +65,14 @@ module.exports = Dummy;
 
   ** Mounted filesystem tests **
 -----------------------------------
-  - [ ] Tests for mountpoints
-  - [ ] Test readdir listing
-  - [ ] Test file writes
-  - [ ] Test symlinks
-  - [ ] Test directories mk/rm
-  - [ ] Test file moving
-  - [ ] Test removes
-  - [ ] Test recursive removes
+  - [x] Tests for mountpoints
+  - [x] Test readdir listing
+  - [x] Test file writes
+  - [x] Test symlinks
+  - [x] Test directories mk/rm
+  - [x] Test file moving
+  - [x] Test removes
+  - [x] Test recursive removes
 
 
 ### LiCENSE
